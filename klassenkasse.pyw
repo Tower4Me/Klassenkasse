@@ -154,13 +154,13 @@ FL  = ("Segoe UI", 28, "bold")
 FS  = ("Segoe UI", 9)
 
 
-def _entry(parent, textvariable, width=10, **kw) -> tk.Entry:
+def _entry(parent, textvariable, width=10, font=None, **kw) -> tk.Entry:
     return tk.Entry(
         parent,
         textvariable=textvariable,
         width=width,
         bg=C["bg"], fg=C["text"],
-        font=FB,
+        font=font or FB,
         insertbackground=C["text"],
         relief="flat",
         highlightthickness=1,
