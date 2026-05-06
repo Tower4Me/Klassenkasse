@@ -170,13 +170,13 @@ def _entry(parent, textvariable, width=10, **kw) -> tk.Entry:
 
 
 def _btn(parent, text, command, color=None, **kw) -> tk.Button:
+    kw.setdefault("font", FB)
     return tk.Button(
         parent,
         text=text,
         command=command,
         bg=color or C["accent"],
         fg="white",
-        font=FB,
         relief="flat",
         cursor="hand2",
         padx=10,
